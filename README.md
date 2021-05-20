@@ -34,16 +34,11 @@ Instalar o bd postgresql, caso não esteja segue o link [postresql](https://www.
 ```
 1- git int na sua pasta que irá baixar o projeto, caso não tenha criado o repositorio local.
 2- git clone https://github.com/thiago-jv/api-crud-usuario-consumindo-api-cep.git
-3- criar o banco de dados e inserts conforme imagens abaixo
+3- criar o banco de dados conforme imagens abaixo
 ```
-![conf](https://github.com/thiago-jv/api-sistema-controle-de-lancamento-de-despesas/blob/main/conf.png)
-
-![conf](https://github.com/thiago-jv/api-sistema-controle-de-lancamento-de-despesas/blob/main/bd.png)
-
-![conf](https://github.com/thiago-jv/api-sistema-controle-de-lancamento-de-despesas/blob/main/inserts.png)
+![conf](https://github.com/thiago-jv/api-crud-usuario-consumindo-api-cep/blob/main/properties.png)
 
 ```
-4- Executar os scripts de db/migration no postgres
 5- Entrar dentro da pasta do projeto
 6- mvn dependency:resolve
 7- mvn dependency:tree
