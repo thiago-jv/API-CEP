@@ -9,8 +9,7 @@ Instalar e configurar o java, caso não esteja segue o link [java](https://mediu
 
 Instalar o bd postgresql, caso não esteja segue o link [postresql](https://www.postgresql.org/)
 
-![Estrutura do Projeto](
-https://github.com/thiago-jv/Api_Rest_SpringBoot_SpringSecurity_SpringData_SpringProfiles_JWT_Design_Pattern_PostgreSQL/blob/main/EstruturaProjeto.png)
+![Estrutura do Projeto](https://github.com/thiago-jv/api-crud-usuario-consumindo-api-cep/blob/main/EstruturaProjeto.png)
 
 
 # Tecnologias utilizadas e outros
@@ -18,24 +17,18 @@ https://github.com/thiago-jv/Api_Rest_SpringBoot_SpringSecurity_SpringData_Sprin
  
  1- Java 8 [Sobre](https://www.java.com/pt-BR/download/help/java8_pt-br.html)
  
- 2- SpringBoot 2.1.4.RELEASE [Sobre](https://docs.spring.io/spring-boot/docs/current/reference/html/)
+ 2- SpringBoot 2.1.1.RELEASE [Sobre](https://docs.spring.io/spring-boot/docs/current/reference/html/)
  
  3- SpringData [Sobre](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference) 
  
- 4- SpringSecurity [Sobre](https://spring.io/projects/spring-security)
+ 4- API REST [Sobre](https://www.redhat.com/pt-br/topics/api/what-is-a-rest-api)
  
- 5- SpringProfiles [Sobre](https://docs.spring.io/spring-boot/docs/1.2.0.M1/reference/html/boot-features-profiles.html)
- 
- 6- API REST [Sobre](https://www.redhat.com/pt-br/topics/api/what-is-a-rest-api)
-
- 7- JWT [Sobre](https://jwt.io/)
- 
- 8- Designer Pattern [Sobre](https://www.opus-software.com.br/design-patterns/)
+ 5- DTO [Sobre](https://qastack.com.br/software/171457/what-is-the-point-of-using-dto-data-transfer-objects)
   
- 9- Maven 3.6.3 [Sobre](https://www.dclick.com.br/2010/09/15/o-que-e-o-maven-e-seus-primeiros-passos-com-a-ferramenta/)
+ 6- Maven 3.6.3 [Sobre](https://www.dclick.com.br/2010/09/15/o-que-e-o-maven-e-seus-primeiros-passos-com-a-ferramenta/)
  
- 10- PostgreSQL [Sobre](https://www.postgresql.org/)
- 
+ 7- PostgreSQL [Sobre](https://www.postgresql.org/)
+
  
  # Proceso para rodar o projeto
 ```
