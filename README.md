@@ -33,7 +33,7 @@ Instalar o bd postgresql, caso não esteja segue o link [postresql](https://www.
  # Proceso para rodar o projeto
 ```
 1- git int na sua pasta que irá baixar o projeto, caso não tenha criado o repositorio local.
-2- git clone https://github.com/thiago-jv/sistema-de-lancamento-de-servico.git
+2- git clone https://github.com/thiago-jv/api-crud-usuario-consumindo-api-cep.git
 3- criar o banco de dados e inserts conforme imagens abaixo
 ```
 ![conf](https://github.com/thiago-jv/api-sistema-controle-de-lancamento-de-despesas/blob/main/conf.png)
