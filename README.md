@@ -45,6 +45,4 @@ Instalar o bd postgresql, caso não esteja segue o link [postresql](https://www.
 8- mvn package
 9- mvn spring-boot:run
 ```
-![GET](https://github.com/thiago-jv/api-sistema-controle-de-lancamento-de-despesas/blob/main/postman-get.png)
-
-![POST](https://github.com/thiago-jv/api-sistema-controle-de-lancamento-de-despesas/blob/main/postman-post.png)
+![POST](https://github.com/thiago-jv/api-crud-usuario-consumindo-api-cep/blob/main/postman.png)
