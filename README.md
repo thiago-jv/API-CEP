@@ -11,6 +11,8 @@ Instalar e configurar o java, caso não esteja segue o link [java](https://mediu
 
 ![Docker compose](https://github.com/thiago-jv/API-CEP/blob/main/docker_compose.png)
 
+![Pg admin](https://github.com/thiago-jv/API-CEP/blob/main/SGDB.png)
+
 
 # Tecnologias utilizadas e outros
 
