@@ -1,5 +1,5 @@
 # api-crud-usuario-consumindo-api-cep
-Projeto didático para demonstar mais um meio de criar uma API com spring boot, spring rest, spring data jpa, postgresql, Padrão DTO 'Data transfer object', modelMap,  versionamento de api, designer partner, tratamento de exceção, swagger api, docker compose e maven.
+Projeto didático para demonstar mais um meio de criar uma API com spring boot, spring rest, spring data jpa, postgresql, Padrão DTO 'Data transfer object', modelMap,  versionamento de api, designer partner, tratamento de exceção, swagger api, docker compose, maven e lombok.
 
 # Pré-requisitos
 
