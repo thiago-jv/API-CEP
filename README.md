@@ -9,6 +9,8 @@ Instalar e configurar o java, caso não esteja segue o link [java](https://mediu
 
 ![Estrutura do Projeto](https://github.com/thiago-jv/API-CEP/blob/main/estrutura_projeto.png)
 
+![Docker compose](https://github.com/thiago-jv/API-CEP/blob/main/docker_compose.png)
+
 
 # Tecnologias utilizadas e outros
 
