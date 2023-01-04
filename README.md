@@ -1,5 +1,5 @@
 # api-crud-usuario-consumindo-api-cep
-Projeto didático para demonstar mais um meio de criar uma API com springRest, SpringData, DTO, PostgreSQL e Maven.
+Projeto didático para demonstar mais um meio de criar uma API com spring boot, spring rest, spring data jpa, postgresql, Padrão DTO 'Data transfer object', modelMap,  versionamento de api, designer partner, tratamento de exceção, swagger api, docker compose e maven.
 
 # Pré-requisitos
 
@@ -33,7 +33,11 @@ Instalar e configurar o java, caso não esteja segue o link [java](https://mediu
   
  6- Maven 3.6.3 [Sobre](https://www.dclick.com.br/2010/09/15/o-que-e-o-maven-e-seus-primeiros-passos-com-a-ferramenta/)
  
- 7- PostgreSQL [Sobre](https://www.postgresql.org/)
+ 7- PostgreSQL + pgadmin4 - docker [Sobre](https://hub.docker.com/_/postgres)
+ 
+ 8- Docker compose [Sobre](https://www.docker.com/)
+ 
+ 9- SpringFox - Swagger2 [Sobre(https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api)]
 
  
  # Proceso para rodar o projeto
