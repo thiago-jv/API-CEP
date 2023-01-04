@@ -17,6 +17,9 @@ Instalar e configurar o java, caso não esteja segue o link [java](https://mediu
 # Pg admin
 ![Pg admin](https://github.com/thiago-jv/API-CEP/blob/main/SGDB.png)
 
+# Swagger
+![Swagger API](https://github.com/thiago-jv/API-CEP/blob/main/swagger.png)
+
 
 # Tecnologias utilizadas e outros
 
