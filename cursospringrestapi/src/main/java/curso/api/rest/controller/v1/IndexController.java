@@ -1,13 +1,12 @@
-package curso.api.rest.controller;
+package curso.api.rest.controller.v1;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.net.URLConnection;
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
+import curso.api.rest.controller.v1.dto.UsuarioRequestDTO;
+import curso.api.rest.restClient.CepClient;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -21,10 +20,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.google.gson.Gson;
-
 import curso.api.rest.model.Usuario;
-import curso.api.rest.model.UsuarioDTO;
+import curso.api.rest.dto.UsuarioDTO;
 import curso.api.rest.repository.UsuarioRepository;
 
 
@@ -34,6 +31,9 @@ public class IndexController {
 	
 	@Autowired
 	private UsuarioRepository usuarioRepository;
+
+	@Autowired
+	private CepClient cepClient;
 
 	@GetMapping(value = "/{id}/codigovenda/{venda}")
 	public ResponseEntity<Usuario> relatorio(
@@ -45,72 +45,33 @@ public class IndexController {
 	
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<UsuarioDTO> init(@PathVariable(value = "id") Long id) {
-		
 		Optional<Usuario> usuario = usuarioRepository.findById(id);
-	
-		return new ResponseEntity<UsuarioDTO>(new UsuarioDTO(usuario.get()), HttpStatus.OK);
+		ModelMapper mapper = new ModelMapper();
+		return ResponseEntity.ok(mapper.map(usuario, UsuarioDTO.class));
 	}
 
 	@GetMapping(value = "/")
 	public ResponseEntity<List<Usuario>> usuario() {
 		List<Usuario> list = (List<Usuario>) usuarioRepository.findAll();	
 		return new ResponseEntity<List<Usuario>>(list, HttpStatus.OK);
-		
 	}
 	
 	@PostMapping(value = "/")
-	public ResponseEntity<Usuario> cadastrar(@RequestBody Usuario usuario) throws Exception {
-		
-		for (int posicao = 0; posicao < usuario.getTelefones().size(); posicao ++) {
+	public ResponseEntity<Usuario> cadastrar(@RequestBody UsuarioRequestDTO usuario) throws IOException {
+		for (int posicao = 0; posicao < usuario.getTelefones().size(); posicao++) {
 			usuario.getTelefones().get(posicao).setUsuario(usuario);
 		}
-		
-		// Consumindo API publica externa
-		
-		URL url = new URL("https://viacep.com.br/ws/"+usuario.getCep()+"/json/"); // temos a URL
-		URLConnection connection = url.openConnection(); // abrimos a conexao
-		InputStream is = connection.getInputStream();  // trazendo os dados
-		BufferedReader br = new BufferedReader(new InputStreamReader(is, "UTF-8")); // obtendo os dados 
-		
-		String cep = "";
-		StringBuilder jsonCep = new StringBuilder(); 
-		
-		while(( cep = br.readLine()) != null) { // tem linha? então coloca o valor na variável CEP
-			jsonCep.append(cep);
-		}
-		
-		System.out.println(jsonCep.toString());
-		
-		Usuario userAux = new Gson().fromJson(jsonCep.toString(), Usuario.class); // irá pegar todos os campos e converter
-		
-		// seta os dados no usuário
-		usuario.setLogradouro(userAux.getLogradouro());
-		usuario.setComplemento(userAux.getComplemento());
-		usuario.setBairro(userAux.getBairro());
-		usuario.setLocalidade(userAux.getLocalidade());
-		usuario.setUf(userAux.getUf());
-		
-		Usuario usuarioSalvo = usuarioRepository.save(usuario);	
+		ModelMapper mapper = new ModelMapper();
+		Usuario usuarioSalvo = usuarioRepository.save(cepClient.buscaCep(mapper.map(usuario, Usuario.class)));
 		return new ResponseEntity<Usuario>(usuarioSalvo, HttpStatus.OK);
-		
-	}
-	
-	@PostMapping(value = "/vendausuario")
-	public ResponseEntity<Usuario> cadastrarvenda(@RequestBody Usuario usuario) {	
-		Usuario usuarioSalvo = usuarioRepository.save(usuario);	
-		return new ResponseEntity<Usuario>(usuarioSalvo, HttpStatus.OK);
-		
 	}
 
 	@PutMapping(value = "/")
-	public ResponseEntity<Usuario> atualizar(@RequestBody Usuario usuario) {
-		
-		
+	public ResponseEntity<Usuario> atualizar(@RequestBody Usuario usuario) throws IOException {
 		for (int posicao = 0; posicao < usuario.getTelefones().size(); posicao ++) {
 			usuario.getTelefones().get(posicao).setUsuario(usuario);
 		}
-		
-		Usuario usuarioSalvo = usuarioRepository.save(usuario);	
+		Usuario usuarioSalvo = usuarioRepository.save(cepClient.buscaCep(usuario));
 		return new ResponseEntity<Usuario>(usuarioSalvo, HttpStatus.OK);
 		
 	}
