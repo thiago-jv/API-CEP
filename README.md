@@ -36,7 +36,6 @@ Instalar o bd postgresql, caso não esteja segue o link [postresql](https://www.
 2- git clone https://github.com/thiago-jv/api-crud-usuario-consumindo-api-cep.git
 3- criar o banco de dados conforme imagens abaixo
 ```
-![conf](https://github.com/thiago-jv/api-crud-usuario-consumindo-api-cep/blob/main/properties.png)
 
 ```
 5- Entrar dentro da pasta do projeto
