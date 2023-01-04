@@ -37,7 +37,7 @@ Instalar e configurar o java, caso não esteja segue o link [java](https://mediu
  
  8- Docker compose [Sobre](https://www.docker.com/)
  
- 9- SpringFox - Swagger2 [Sobre(https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api)]
+ 9- SpringFox - Swagger2 [Sobre](https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api)
 
  
  # Proceso para rodar o projeto
