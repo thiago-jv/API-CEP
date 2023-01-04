@@ -1,7 +1,7 @@
-package curso.api.rest.core;
+package curso.api.rest.api.core;
 
 import com.fasterxml.classmate.TypeResolver;
-import curso.api.rest.exceptionhandler.Problema;
+import curso.api.rest.api.exceptionhandler.Problema;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

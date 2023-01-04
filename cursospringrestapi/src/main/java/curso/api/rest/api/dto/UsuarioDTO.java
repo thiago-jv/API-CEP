@@ -1,4 +1,4 @@
-package curso.api.rest.dto;
+package curso.api.rest.api.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package curso.api.rest.exceptionhandler;
+package curso.api.rest.api.exceptionhandler;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;

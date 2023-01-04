@@ -6,7 +6,9 @@ import java.util.List;
 import curso.api.rest.controller.v1.dto.UsuarioRequestPostDTO;
 import curso.api.rest.controller.v1.dto.UsuarioRequestPutDTO;
 import curso.api.rest.controller.v1.dto.UsuarioResponseDTO;
-import curso.api.rest.restClient.CepClient;
+import curso.api.rest.api.restClient.CepClient;
+import curso.api.rest.domain.model.Usuario;
+import curso.api.rest.domain.repository.UsuarioRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,8 +23,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import curso.api.rest.model.Usuario;
-import curso.api.rest.repository.UsuarioRepository;
 
 @RestController
 @RequestMapping(value = "/index", produces = MediaType.APPLICATION_JSON_VALUE)

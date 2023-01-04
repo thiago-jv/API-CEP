@@ -1,7 +1,7 @@
-package curso.api.rest.restClient;
+package curso.api.rest.api.restClient;
 
 import com.google.gson.Gson;
-import curso.api.rest.model.Usuario;
+import curso.api.rest.domain.model.Usuario;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;

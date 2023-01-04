@@ -1,11 +1,10 @@
-package curso.api.rest.exceptionhandler;
+package curso.api.rest.api.exceptionhandler;
 
 import java.sql.SQLException;
 import java.util.List;
 
 import javax.validation.ConstraintViolationException;
 
-import curso.api.rest.exceptionhandler.ObjetoErro;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
