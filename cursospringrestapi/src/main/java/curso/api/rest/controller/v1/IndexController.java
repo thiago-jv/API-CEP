@@ -40,7 +40,7 @@ public class IndexController {
 			                                 @PathVariable(value = "id") Long id,
 	                                         @PathVariable(value = "venda") Long venda) {
 		Optional<Usuario> usuario = usuarioRepository.findById(id);
-		return new ResponseEntity<Usuario>(usuario.get(), HttpStatus.OK);
+		return new ResponseEntity<>(usuario.get(), HttpStatus.OK);
 	}
 	
 	@GetMapping(value = "/{id}")
@@ -53,7 +53,7 @@ public class IndexController {
 	@GetMapping(value = "/")
 	public ResponseEntity<List<Usuario>> usuario() {
 		List<Usuario> list = (List<Usuario>) usuarioRepository.findAll();	
-		return new ResponseEntity<List<Usuario>>(list, HttpStatus.OK);
+		return new ResponseEntity<>(list, HttpStatus.OK);
 	}
 	
 	@PostMapping(value = "/")
@@ -63,7 +63,7 @@ public class IndexController {
 		}
 		ModelMapper mapper = new ModelMapper();
 		Usuario usuarioSalvo = usuarioRepository.save(cepClient.buscaCep(mapper.map(usuario, Usuario.class)));
-		return new ResponseEntity<Usuario>(usuarioSalvo, HttpStatus.OK);
+		return new ResponseEntity<>(usuarioSalvo, HttpStatus.OK);
 	}
 
 	@PutMapping(value = "/")
@@ -72,7 +72,7 @@ public class IndexController {
 			usuario.getTelefones().get(posicao).setUsuario(usuario);
 		}
 		Usuario usuarioSalvo = usuarioRepository.save(cepClient.buscaCep(usuario));
-		return new ResponseEntity<Usuario>(usuarioSalvo, HttpStatus.OK);
+		return new ResponseEntity<>(usuarioSalvo, HttpStatus.OK);
 		
 	}
 	

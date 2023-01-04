@@ -1,14 +1,12 @@
 package curso.api.rest.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -23,7 +21,6 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @Entity
-@AllArgsConstructor
 @ToString
 @Table(name = "USUARIO", schema = "public")
 public class Usuario implements Serializable {

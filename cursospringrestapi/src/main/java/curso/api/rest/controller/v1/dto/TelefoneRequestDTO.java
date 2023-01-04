@@ -7,8 +7,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -21,8 +19,5 @@ public class TelefoneRequestDTO {
 	
 	@JsonIgnore
 	private UsuarioRequestDTO usuario;
-	
-	public TelefoneRequestDTO() {
-	}
 	
 }

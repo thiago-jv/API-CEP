@@ -7,19 +7,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.hibernate.annotations.ForeignKey;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Getter
 @Setter
 @Entity
-@AllArgsConstructor
 @ToString
 public class Telefone {
 
@@ -34,9 +31,6 @@ public class Telefone {
 	@JsonIgnore
 	@ManyToOne(optional = false)
 	private Usuario usuario;
-	
-	public Telefone() {
-		// TODO Auto-generated constructor stub
-	}
+
 	
 }

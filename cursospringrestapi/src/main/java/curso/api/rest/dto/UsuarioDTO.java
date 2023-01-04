@@ -1,6 +1,5 @@
 package curso.api.rest.dto;
 
-import curso.api.rest.model.Usuario;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
