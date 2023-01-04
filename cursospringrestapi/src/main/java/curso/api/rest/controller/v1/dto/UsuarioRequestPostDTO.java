@@ -1,19 +1,19 @@
 package curso.api.rest.controller.v1.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.List;
 
+@NoArgsConstructor
 @Getter
 @Setter
 @ToString
-public class UsuarioRequestDTO implements Serializable {
+public class UsuarioRequestPostDTO implements Serializable {
 
 	/**
 	 * 
@@ -32,6 +32,6 @@ public class UsuarioRequestDTO implements Serializable {
 	@ApiModelProperty(value = "cep", example = "69093118", required = true)
 	private String cep;
 
-	private List<TelefoneRequestDTO> telefones;
+	private List<TelefoneRequestPostDTO> telefones;
 
 }

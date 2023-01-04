@@ -1,4 +1,4 @@
-package curso.api.rest;
+package curso.api.rest.exceptionhandler;
 
 public class ObjetoErro {
 

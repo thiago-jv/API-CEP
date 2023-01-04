@@ -1,10 +1,11 @@
-package curso.api.rest;
+package curso.api.rest.exceptionhandler;
 
 import java.sql.SQLException;
 import java.util.List;
 
 import javax.validation.ConstraintViolationException;
 
+import curso.api.rest.exceptionhandler.ObjetoErro;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -43,7 +44,7 @@ public class ControleExcecoes extends ResponseEntityExceptionHandler{
 		objetoErro.setError(msg);
 		objetoErro.setCode(status.value() + " ==> " + status.getReasonPhrase());
 		
-		return new ResponseEntity<Object>(objetoErro, headers, status);	
+		return new ResponseEntity<>(objetoErro, headers, status);
 	}
 	
 	// Trata a maioria dos erros de nivel de banco de dados
