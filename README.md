@@ -5,6 +5,17 @@ Projeto didático para demonstar mais um meio de criar uma API com spring boot, 
 ![docker-containers](https://github.com/thiago-jv/API-CEP/blob/main/docker-run.png)
 ![banco](https://github.com/thiago-jv/API-CEP/blob/main/docker.png)
 
+ # Proceso para rodar o projeto
+```
+1- git int na sua pasta que irá baixar o projeto, caso não tenha criado o repositorio local.
+2- git clone https://github.com/thiago-jv/api-crud-usuario-consumindo-api-cep.git
+3- Entrar dentro da pasta do projeto
+4- mvn dependency:resolve
+5- mvn dependency:tree
+6- mvn package -P desenvolvimento
+7- mvn spring-boot:run
+```
+
 # Tecnologias utilizadas e outros
 
  
@@ -26,19 +37,5 @@ Projeto didático para demonstar mais um meio de criar uma API com spring boot, 
  
  9- SpringFox - Swagger2 [Sobre](https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api)
 
- 
- # Proceso para rodar o projeto
-```
-1- git int na sua pasta que irá baixar o projeto, caso não tenha criado o repositorio local.
-2- git clone https://github.com/thiago-jv/api-crud-usuario-consumindo-api-cep.git
-3- criar o banco de dados conforme imagens abaixo
-```
 
-```
-5- Entrar dentro da pasta do projeto
-6- mvn dependency:resolve
-7- mvn dependency:tree
-8- mvn package
-9- mvn spring-boot:run
-```
 ![POST](https://github.com/thiago-jv/api-crud-usuario-consumindo-api-cep/blob/main/postman.png)
