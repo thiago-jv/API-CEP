@@ -1,25 +1,9 @@
 # api-crud-usuario-consumindo-api-cep
 Projeto didático para demonstar mais um meio de criar uma API com spring boot, spring rest, spring data jpa, postgresql, Padrão DTO 'Data transfer object', modelMap,  versionamento de api, designer partner, tratamento de exceção, swagger api, docker compose, maven e lombok.
 
-# Pré-requisitos
-
-O maven deve está instalado, caso não esteja segue o link [maven](https://dicasdejava.com.br/como-instalar-o-maven-no-windows/)
-
-Instalar e configurar o java, caso não esteja segue o link [java](https://medium.com/beelabacademy/configurando-vari%C3%A1veis-de-ambiente-java-home-e-maven-home-no-windows-e-unix-d9461f783c26)
-
-
-# Estrutura do projeto
-![Estrutura do Projeto](https://github.com/thiago-jv/API-CEP/blob/main/estrutura_projeto.png)
-
-# Docker
-![Docker compose](https://github.com/thiago-jv/API-CEP/blob/main/docker_compose.png)
-
-# Pg admin
-![Pg admin](https://github.com/thiago-jv/API-CEP/blob/main/SGDB.png)
-
-# Swagger
-![Swagger API](https://github.com/thiago-jv/API-CEP/blob/main/swagger.png)
-
+![docker-compose](https://github.com/thiago-jv/API-CEP/blob/main/docker-compose.png)
+![docker-containers](https://github.com/thiago-jv/API-CEP/blob/main/docker-run.png)
+![banco](https://github.com/thiago-jv/API-CEP/blob/main/docker.png)
 
 # Tecnologias utilizadas e outros
 
